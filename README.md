@@ -77,20 +77,20 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     [Grupo01]: [Nomes dos que participaram na avaliação]
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
-#### 5.2 Descrição dos dados 
-    PESSOA: Tabela que armazena as informações que serão herdadas para cada Aluno e Instrutor.
-       - email: Campo da tabela PESSOA que armazena o e-mail de acesso para cada pessoa que acessar o EADica.
-       - senha: Campo da tabela PESSOA que armazena a senha de acesso para cada pessoa que acessar o EADica.
-       - cpf: Campo da tabela PESSOA que armazena o número de Cadastro de Pessoa Fisica para cada pessoa que acessar o EADica.
-       - nome: Campo da tabela PESSOA que armazena o nome completo para cada pessoa que acessar o EADica.
+#### 5.2 Descrição dos dados <br>
+   PESSOA: Tabela que armazena as informações que serão herdadas para cada Aluno e Instrutor.<br>
+       - email: Campo da tabela PESSOA que armazena o e-mail de acesso para cada pessoa que acessar o EADica.<br>
+       - senha: Campo da tabela PESSOA que armazena a senha de acesso para cada pessoa que acessar o EADica.<br>
+       - cpf: Campo da tabela PESSOA que armazena o número de Cadastro de Pessoa Fisica para cada pessoa que acessar o EADica.<br>
+       - nome: Campo da tabela PESSOA que armazena o nome completo para cada pessoa que acessar o EADica.<br>
        
-    ALUNO: Tabela que armazena as informações específicas de Aluno.
-       - matricula: Campo da tabela ALUNO que armazena o número de matrícula de cada aluno cadastrado no EADica.
+   ALUNO: Tabela que armazena as informações específicas de Aluno.<br>
+       - matricula: Campo da tabela ALUNO que armazena o número de matrícula de cada aluno cadastrado no EADica.<br>
        
-    INSTRUTOR: Tabela que armazena as informações específicas de Instrutor.
-       - valor_comissão: Campo da tabela INSTRUTOR que armazena o valor em reais recebido pelo intrutor, referente a sua contribuição dando aulas no EADica.
+   INSTRUTOR: Tabela que armazena as informações específicas de Instrutor.<br>
+       - valor_comissão: Campo da tabela INSTRUTOR que armazena o valor em reais recebido pelo intrutor, referente a sua contribuição dando aulas no EADica.<br>
     
-    CURSO: Tabela que armazena as informações referente a cada curso disponível no EADica.
+   CURSO: Tabela que armazena as informações referente a cada curso disponível no EADica.<br>
        - nome:
        - duracao:
        - categoria:
