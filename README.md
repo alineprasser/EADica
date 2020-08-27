@@ -78,11 +78,28 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
-    PESSOA: Tabela que armazena as informações que serão herdadas para Aluno e Instrutor, como e-mail, senha, cpf e nome.
-        E-mail: campo que armazena o e-mail de acesso para cada pessoa que acessar o EADica.
-
-
+    PESSOA: Tabela que armazena as informações que serão herdadas para cada Aluno e Instrutor.
+       - email: Campo da tabela PESSOA que armazena o e-mail de acesso para cada pessoa que acessar o EADica.
+       - senha: Campo da tabela PESSOA que armazena a senha de acesso para cada pessoa que acessar o EADica.
+       - cpf: Campo da tabela PESSOA que armazena o número de Cadastro de Pessoa Fisica para cada pessoa que acessar o EADica.
+       - nome: Campo da tabela PESSOA que armazena o nome completo para cada pessoa que acessar o EADica.
+       
+    ALUNO: Tabela que armazena as informações específicas de Aluno.
+       - matricula: Campo da tabela ALUNO que armazena o número de matrícula de cada aluno cadastrado no EADica.
+       
+    INSTRUTOR: Tabela que armazena as informações específicas de Instrutor.
+       - valor_comissão: Campo da tabela INSTRUTOR que armazena o valor em reais recebido pelo intrutor, referente a sua contribuição dando aulas no EADica.
+    
+    CURSO: Tabela que armazena as informações referente a cada curso disponível no EADica.
+       - nome:
+       - duracao:
+       - categoria:
+       - descricao:
+       - certificado:
+    
 ### 6	MODELO LÓGICO<br>
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/logico.jpeg?raw=true "Modelo Conceitual")
+
         a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
@@ -91,6 +108,20 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
         (criação de tabelas, alterações, etc..) 
         
+        Criação das Tabelas:
+        create table Pessoa (cod_pessoa serial PRIMARY KEY, nome varchar(50), cpf char(11), email varchar(50), senha varchar(20));
+        
+        create table Aluno (cod_pessoa int, matricula varchar(10), FOREIGN KEY (cod_pessoa) REFERENCES Pessoa (cod_pessoa));
+        
+        create table Instrutor (cod_pessoa int, qtd_comissao float, FOREIGN KEY (cod_pessoa) REFERENCES Pessoa (cod_pessoa));
+        
+        create table Curso ( cod_curso serial PRIMARY KEY, nome varchar(50), categoria varchar(255), duracao float, certificado varchar(255), descricao varchar(255));
+        
+        create table Aluno_Curso (cod_aluno_curso serial PRIMARY KEY, cod_pessoa int, cod_curso int, qtd_horas_assistidas float, data date, FOREIGN KEY (cod_pessoa) REFERENCES            Pessoa (cod_pessoa), FOREIGN KEY (cod_curso) REFERENCES Curso (cod_curso));
+        
+        create table Instrutor_Curso ( cod_instrutor_curso serial PRIMARY KEY, cod_pessoa int, cod_curso int, qtd_horas_ministradas float, FOREIGN KEY (cod_pessoa) REFERENCES            Pessoa (cod_pessoa), FOREIGN KEY (cod_curso) REFERENCES Curso (cod_curso));
+
+        
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
@@ -98,7 +129,60 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         b) Criar um novo banco de dados para testar a restauracao 
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
+        
+        Inserção de Dados
+        insert into Pessoa (nome, cpf, email, senha) values
+            ('Sandra Rosa','15348466504', 'sandrarosa@gmail.com', 'randrasosa')
+            ,('Alexandre Soares','78533465901','asoares@gmail.com','alesoarestop')
+            ,('Pietro Moraes','12344125642','pietro_moraes@gmail.com','orteipmoraes')
+            ,('Marcela Gomes','32216401512','marcelagomes@gmail.com','celinha123')
+            ,('Paola Guimarães','11211644214','guipaola@gmail.com','p@0l4')
+            ,('Arlindo Damasseno','11235481023','damasseno.lindo@gmail.com','lindoardama')
+            ,('Pedro Souza','33122633014','p.souza@gmail.com','souzinhapedro')
+            ,('Almira Palhares','33466122401','palmirinha@gmail.com', '123145a')
+            ,('Samira Alma Alves','14255784612','almasamira@gmail.com','alma!123')
+            ,('Carla Tavares','89941225199','tavarescarla@gmail.com','291255!');
 
+        insert into Aluno (cod_pessoa, matricula) values
+            (1,20201001)
+            ,(2,20201002)
+            ,(3,20201003)
+            ,(4,20201004)
+            ,(5,20201005);
+
+        insert into Instrutor (cod_pessoa,qtd_comissao) values
+            (6,50)
+            ,(7,50)
+            ,(8,55)
+            ,(9,55)
+            ,(10,55);
+
+        insert into Curso (nome, categoria, duracao, descricao, certificado) values
+            ('Lógica de programação para iniciantes','Tecnologia',60, ' Curso focado em ensinar as bases da lógica de programação','Emitido após conclusão')
+            ,('Web design','Design',95,'Curso focado em aprimorar conhecimentos já existentes de Design','Emitido após conclusão')
+            ,('Banco de dados','Tecnologia',100,'Curso básico de banco de dados','Emitido após conclusão')
+            ,('Matemática básica','Matemática',30,'Curso com enfoque básico em matemática para alunos do ensino médio','Emitido ao meio e após a conclusão do curso')
+            ,('Gourmetização dos doces','Culinária',150,'Aprenda a fazer doces deliciosos','Emitido após conclusão')
+            ,('Gourmetização dos salgados','Culinária',100,'Aprenda a fazer salgadinhos para sua festa','Emitido após conclusão')
+            ,('Fundamentos de SQL','Tecnologia',80,'Saiba mais sobre SQL','Emitido após conclusão');
+
+        insert into Aluno_Curso (cod_pessoa, cod_curso, data, qtd_horas_assistidas) values
+            (1,4, '2020-06-29', 9)
+            ,(2,3,'2020-06-15',24)
+            ,(3,2,'2020-06-18',50)
+            ,(4,5,'2020-06-16',3)
+            ,(5,1,'2020-06-20',4)
+            ,(5,3,'2020-06-20',3)
+            ,(4,6,'2020-07-01',70);
+
+        insert into Instrutor_Curso (cod_pessoa, cod_curso, qtd_horas_ministradas) values
+            (6,3,95)
+            ,(7,2,45)
+            ,(8,5,130)
+            ,(9,1,41)
+            ,(10,4,22)
+            ,(8,6,90)
+            ,(6,7,40);
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
