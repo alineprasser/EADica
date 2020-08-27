@@ -78,19 +78,19 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados <br>
-   PESSOA: Tabela que armazena as informações que serão herdadas para cada Aluno e Instrutor.<br>
-       - email: Campo da tabela PESSOA que armazena o e-mail de acesso para cada pessoa que acessar o EADica.<br>
-       - senha: Campo da tabela PESSOA que armazena a senha de acesso para cada pessoa que acessar o EADica.<br>
-       - cpf: Campo da tabela PESSOA que armazena o número de Cadastro de Pessoa Fisica para cada pessoa que acessar o EADica.<br>
-       - nome: Campo da tabela PESSOA que armazena o nome completo para cada pessoa que acessar o EADica.<br>
+   * PESSOA: Tabela que armazena as informações que serão herdadas para cada Aluno e Instrutor.
+       - email: Campo da tabela PESSOA que armazena o e-mail de acesso para cada pessoa que acessar o EADica.
+       - senha: Campo da tabela PESSOA que armazena a senha de acesso para cada pessoa que acessar o EADica.
+       - cpf: Campo da tabela PESSOA que armazena o número de Cadastro de Pessoa Fisica para cada pessoa que acessar o EADica.
+       - nome: Campo da tabela PESSOA que armazena o nome completo para cada pessoa que acessar o EADica.
        
-   ALUNO: Tabela que armazena as informações específicas de Aluno.<br>
-       - matricula: Campo da tabela ALUNO que armazena o número de matrícula de cada aluno cadastrado no EADica.<br>
+   * ALUNO: Tabela que armazena as informações específicas de Aluno.
+       - matricula: Campo da tabela ALUNO que armazena o número de matrícula de cada aluno cadastrado no EADica.
        
-   INSTRUTOR: Tabela que armazena as informações específicas de Instrutor.<br>
-       - valor_comissão: Campo da tabela INSTRUTOR que armazena o valor em reais recebido pelo intrutor, referente a sua contribuição dando aulas no EADica.<br>
+   * INSTRUTOR: Tabela que armazena as informações específicas de Instrutor.
+       - valor_comissão: Campo da tabela INSTRUTOR que armazena o valor em reais recebido pelo intrutor, referente a sua contribuição dando aulas no EADica.
     
-   CURSO: Tabela que armazena as informações referente a cada curso disponível no EADica.<br>
+   * CURSO: Tabela que armazena as informações referente a cada curso disponível no EADica.
        - nome:
        - duracao:
        - categoria:
@@ -108,18 +108,18 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
         (criação de tabelas, alterações, etc..) 
         
-        Criação das Tabelas:
-        create table Pessoa (cod_pessoa serial PRIMARY KEY, nome varchar(50), cpf char(11), email varchar(50), senha varchar(20));
+   Criação das Tabelas:
+        create table Pessoa (cod_pessoa serial PRIMARY KEY, nome varchar(50), cpf char(11), email varchar(50), senha varchar(20));<br>
         
-        create table Aluno (cod_pessoa int, matricula varchar(10), FOREIGN KEY (cod_pessoa) REFERENCES Pessoa (cod_pessoa));
+        create table Aluno (cod_pessoa int, matricula varchar(10), FOREIGN KEY (cod_pessoa) REFERENCES Pessoa (cod_pessoa));<br>
         
-        create table Instrutor (cod_pessoa int, qtd_comissao float, FOREIGN KEY (cod_pessoa) REFERENCES Pessoa (cod_pessoa));
+        create table Instrutor (cod_pessoa int, qtd_comissao float, FOREIGN KEY (cod_pessoa) REFERENCES Pessoa (cod_pessoa));<br>
         
-        create table Curso ( cod_curso serial PRIMARY KEY, nome varchar(50), categoria varchar(255), duracao float, certificado varchar(255), descricao varchar(255));
+        create table Curso ( cod_curso serial PRIMARY KEY, nome varchar(50), categoria varchar(255), duracao float, certificado varchar(255), descricao varchar(255));<br>
         
-        create table Aluno_Curso (cod_aluno_curso serial PRIMARY KEY, cod_pessoa int, cod_curso int, qtd_horas_assistidas float, data date, FOREIGN KEY (cod_pessoa) REFERENCES            Pessoa (cod_pessoa), FOREIGN KEY (cod_curso) REFERENCES Curso (cod_curso));
+        create table Aluno_Curso (cod_aluno_curso serial PRIMARY KEY, cod_pessoa int, cod_curso int, qtd_horas_assistidas float, data date, FOREIGN KEY (cod_pessoa) REFERENCES            Pessoa (cod_pessoa), FOREIGN KEY (cod_curso) REFERENCES Curso (cod_curso));<br>
         
-        create table Instrutor_Curso ( cod_instrutor_curso serial PRIMARY KEY, cod_pessoa int, cod_curso int, qtd_horas_ministradas float, FOREIGN KEY (cod_pessoa) REFERENCES            Pessoa (cod_pessoa), FOREIGN KEY (cod_curso) REFERENCES Curso (cod_curso));
+        create table Instrutor_Curso ( cod_instrutor_curso serial PRIMARY KEY, cod_pessoa int, cod_curso int, qtd_horas_ministradas float, FOREIGN KEY (cod_pessoa) REFERENCES            Pessoa (cod_pessoa), FOREIGN KEY (cod_curso) REFERENCES Curso (cod_curso));<br>
 
         
        
