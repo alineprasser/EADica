@@ -68,7 +68,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
         e tuplas falsas (Aplicar os conceitos de normalização abordados).   
         
-![Alt text](https://github.com/discipbd1/trab01/blob/master/images/conceitual.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/conceitual.png?raw=true "Modelo Conceitual")
     
     
         
@@ -78,11 +78,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+    PESSOA: Tabela que armazena as informações que serão herdadas para Aluno e Instrutor, como e-mail, senha, cpf e nome.
+        E-mail: campo que armazena o e-mail de acesso para cada pessoa que acessar o EADica.
 
 
 ### 6	MODELO LÓGICO<br>
