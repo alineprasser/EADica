@@ -99,14 +99,14 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
        - duração: Campo da tabela CURSO que armazena o tempo de duração, em horas, para cada curso.
        - categoria:Campo da tabela CURSO que armazena a categoria para cada curso.
        - descrição: Campo da tabela CURSO que armazena a descrição (mais informações sobre o curso) para cada curso.
-       - certificado.
+       - certificado: Campo da tabela CURSO que armazena em que parte do curso o certificado será emitido ao aluno.
        
    * ASSISTE: Relacionamento entre Aluno e Curso.
-       - data:
-       - horas_assistidas:
+       - data: Campo da tabela RELACIONAMENTO ASSISTE que armazena data em que o aluno acessou o curso.
+       - horas_assistidas: Campo da tabela RELACIONAMENTO ASSISTE que armazena a quatidade de horas do curso assistida pelo aluno.
       
    * MINISTRA: Relacionamento entre Istrutor e Curso.
-       - horas_ministradas:
+       - horas_ministradas: Campo da tabela RELACIONAMENTO MINISTRA que armazena a quatidade de horas ministradas pelo instrutor.
     
 ### 6.	MODELO LÓGICO<br>
 ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/logico.jpeg?raw=true "Modelo Logico")
