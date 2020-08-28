@@ -199,6 +199,9 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
    
         SELECT * FROM ALUNO
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectAluno.PNG?raw=true "Select Aluno")
+   
+        SELECT * FROM CURSO
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectCurso.PNG?raw=true "Select Curso")   
     
         SELECT * FROM INSTRUTOR
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectInstrutor.PNG?raw=true "Select Instrutor")
