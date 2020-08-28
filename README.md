@@ -194,6 +194,23 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
+        SELECT * FROM PESSOA     
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectPessoa.PNG?raw=true "Select Pessoa")
+   
+        SELECT * FROM ALUNO
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectAluno.PNG?raw=true "Select Aluno")
+    
+        SELECT * FROM INSTRUTOR
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectInstrutor.PNG?raw=true "Select Instrutor")
+   
+        SELECT * FROM ALUNO_CURSO
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectAlunoCurso.PNG?raw=true "Select Aluno_Curso") 
+   
+        SELECT * FROM INSTRUTOR_CURSO
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectInstrutorCurso.PNG?raw=true "Select Instrutor_Curso") 
+   
+   
+   
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
