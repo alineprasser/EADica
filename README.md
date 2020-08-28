@@ -105,7 +105,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
        - data: Campo da tabela RELACIONAMENTO ASSISTE que armazena data em que o aluno acessou o curso.
        - horas_assistidas: Campo da tabela RELACIONAMENTO ASSISTE que armazena a quatidade de horas do curso assistida pelo aluno.
       
-   * MINISTRA: Relacionamento entre Istrutor e Curso.
+   * MINISTRA: Relacionamento entre Instrutor e Curso.
        - horas_ministradas: Campo da tabela RELACIONAMENTO MINISTRA que armazena a quatidade de horas ministradas pelo instrutor.
     
 ### 6.	MODELO LÓGICO<br>
