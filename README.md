@@ -36,6 +36,8 @@ Ao final do curso, as horas cumpridas do aluno precisam ser validadas antes de s
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
 
+(https://github.com/alineprasser/EADica/blob/master/images/Prototipo.PNG?raw=true)
+
 [Arquivo PDF do Protótipo Balsamiq EADica](https://github.com/alineprasser/EADica/blob/master/arquivos/EADica%20-%20Prototipo.pdf)
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
