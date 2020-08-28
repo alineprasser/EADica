@@ -79,23 +79,32 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 #### 5.2 Descrição dos dados <br>
    * PESSOA: Tabela que armazena as informações que serão herdadas para cada Aluno e Instrutor.
+       - id_pessoa: Campo da tabela PESSOA que armazena a identificação da pessoa.
        - email: Campo da tabela PESSOA que armazena o e-mail de acesso para cada pessoa que acessar o EADica.
        - senha: Campo da tabela PESSOA que armazena a senha de acesso para cada pessoa que acessar o EADica.
        - cpf: Campo da tabela PESSOA que armazena o número de Cadastro de Pessoa Fisica para cada pessoa que acessar o EADica.
        - nome: Campo da tabela PESSOA que armazena o nome completo para cada pessoa que acessar o EADica.
        
    * ALUNO: Tabela que armazena as informações específicas de Aluno.
-       - matricula: Campo da tabela ALUNO que armazena o número de matrícula de cada aluno cadastrado no EADica.
+       - matrícula: Campo da tabela ALUNO que armazena o número de matrícula de cada aluno cadastrado no EADica.
        
    * INSTRUTOR: Tabela que armazena as informações específicas de Instrutor.
        - valor_comissão: Campo da tabela INSTRUTOR que armazena o valor em reais recebido pelo intrutor, referente a sua contribuição dando aulas no EADica.
     
    * CURSO: Tabela que armazena as informações referente a cada curso disponível no EADica.
-       - nome:
-       - duracao:
-       - categoria:
-       - descricao:
-       - certificado:
+       - id_curso: Campo da tabela CURSO que armazena a identificação do curso.
+       - nome: Campo da tabela CURSO que armazena o nome para cada curso.
+       - duração: Campo da tabela CURSO que armazena o tempo de duração, em horas, para cada curso.
+       - categoria:Campo da tabela CURSO que armazena a categoria para cada curso.
+       - descrição: Campo da tabela CURSO que armazena a descrição (mais informações sobre o curso) para cada curso.
+       - certificado.
+       
+   * ASSISTE: Relacionamento entre Aluno e Curso.
+       - data:
+       - horas_assistidas:
+      
+   * MINISTRA: Relacionamento entre Istrutor e Curso.
+       - horas_ministradas:
     
 ### 6.	MODELO LÓGICO<br>
 ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/logico.jpeg?raw=true "Modelo Conceitual")
