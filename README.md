@@ -117,8 +117,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 ### 7.	MODELO FÍSICO<br>
         
-        Criação das tabelas com chaves estrangeiras:
-    
+        CRIAÇÃO DAS TABELAS COM CHAVES ESTRANGEIRAS:
+        
         create table Pessoa (cod_pessoa serial PRIMARY KEY, nome varchar(50), cpf char(11), email varchar(50), senha varchar(20));
         
         create table Aluno (cod_pessoa int, matricula varchar(10), FOREIGN KEY (cod_pessoa) REFERENCES Pessoa (cod_pessoa));
@@ -135,7 +135,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
        
 ### 8.	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
    
-        Inserção de Dados:
+        INSERÇÃO DE DADOS:
         
         insert into Pessoa (nome, cpf, email, senha) values
             ('Sandra Rosa','15348466504', 'sandrarosa@gmail.com', 'randrasosa')
