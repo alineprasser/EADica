@@ -116,10 +116,9 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         (não serão aceitos modelos que não estejam em conformidade)
 
 ### 7.	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        (criação de tabelas, alterações, etc..) 
         
-    Criação das Tabelas:
+        Criação das tabelas com chaves estrangeiras:
+    
         create table Pessoa (cod_pessoa serial PRIMARY KEY, nome varchar(50), cpf char(11), email varchar(50), senha varchar(20));
         
         create table Aluno (cod_pessoa int, matricula varchar(10), FOREIGN KEY (cod_pessoa) REFERENCES Pessoa (cod_pessoa));
@@ -135,13 +134,9 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         
        
 ### 8.	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-        (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+   
+        Inserção de Dados:
         
-        Inserção de Dados
         insert into Pessoa (nome, cpf, email, senha) values
             ('Sandra Rosa','15348466504', 'sandrarosa@gmail.com', 'randrasosa')
             ,('Alexandre Soares','78533465901','asoares@gmail.com','alesoarestop')
