@@ -44,7 +44,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
 > O sistema fornecerá que tipo de informação?
-* EADica fornecerá aos alunos conteúdos exclusivos em sua plataforma, enquanto aos professores mostrará como vai o andamento da sua turma.
+* EADica fornecerá aos alunos conteúdos exclusivos em sua plataforma e emitirá certificados de conclusão de cursos, enquanto aos professores mostrará como vai o andamento da sua turma.
 
 > A EADica poderá fornecer os seguintes relatórios:
 * Relatório que mostre quantos alunos já concluíram algum curso
