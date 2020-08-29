@@ -38,7 +38,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/Prototipo.PNG?raw=true "Pototipo")
 
 
-[Arquivo PDF do Protótipo Balsamiq EADica](https://github.com/alineprasser/EADica/blob/master/arquivos/EADica%20-%20Prototipo.pdf)
+[Arquivo PDF do Protótipo Balsamiq EADica](https://github.com/alineprasser/EADica/raw/master/arquivos/EADica%20-%20Prototipo.pdf)
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
