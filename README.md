@@ -77,8 +77,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         
     
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+    [Grupo01]: [Pedro Paulo Silva, Ana Elisa Rezende, Amanda Souza]
+    [Grupo02]: [Gabrielle Azevedo, Eduarda Rodrigues e Thiago Freitas]
 
 #### 5.2 Descrição dos dados <br>
    * PESSOA: Tabela que armazena as informações que serão herdadas para cada Aluno e Instrutor.
