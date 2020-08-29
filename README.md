@@ -194,6 +194,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 ### 9.	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+    
+[Link para o Notebook Colab](https://colab.research.google.com/drive/1OrMqNdFlwdn3QZb-6JrqZfzvMlKO8Vkv?usp=sharing)
 
         SELECT * FROM PESSOA     
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectPessoa.PNG?raw=true "Select Pessoa")
