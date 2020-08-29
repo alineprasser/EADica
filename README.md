@@ -78,8 +78,9 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Pedro Paulo Silva, Ana Elisa Rezende, Amanda Souza]
+    >Não retornaram nenhuma modificação a ser feita
     [Grupo02]: [Gabrielle Azevedo, Eduarda Rodrigues e Thiago Freitas]
-
+    >Não retornaram nenhuma modificação a ser feita
 #### 5.2 Descrição dos dados <br>
    * PESSOA: Tabela que armazena as informações que serão herdadas para cada Aluno e Instrutor.
        - id_pessoa: Campo da tabela PESSOA que armazena a identificação da pessoa.
