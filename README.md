@@ -221,6 +221,18 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+    SELECT * FROM ALUNO WHERE COD_PESSOA > 2;
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where1.PNG?raw=true "where1")
+
+    SELECT * FROM INSTRUTOR_CURSO WHERE QTD_HORAS_MINISTRADAS >= 45;
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where2.PNG?raw=true "where2")
+
+    SELECT * FROM ALUNO_CURSO WHERE COD_CURSO = 3;
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where3.PNG?raw=true "where3")
+    
+    SELECT * FROM CURSO WHERE CATEGORIA = 'Tecnologia';
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where4.PNG?raw=true "where4")
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
