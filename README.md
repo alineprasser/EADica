@@ -233,10 +233,27 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     SELECT * FROM CURSO WHERE CATEGORIA = 'Tecnologia';
 ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where4.PNG?raw=true "where4")
 
-#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)<br>
+   a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
+    
+    SELECT * FROM CURSO WHERE COD_CURSO>2 AND DURACAO>=100;
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/AND.PNG?raw=true "AND")
+    
+    SELECT * FROM CURSO WHERE DURACAO>100 AND CATEGORIA='Culinária';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/AND2.PNG?raw=true "AND2")
+   
+    SELECT * FROM ALUNO_CURSO WHERE QTD_HORAS_ASSISTIDAS>9 OR COD_CURSO=3;
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/OR.PNG?raw=true "OR")
+   
+    SELECT * FROM CURSO WHERE CERTIFICADO='Emitido após conclusão' OR DURACAO>30;
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/OR2.PNG?raw=true "OR2")
+   
+    SELECT * FROM PESSOA WHERE CPF IS NOT NULL;
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/NOT.PNG?raw=true "NOT")
+   
+   b) Criar no mínimo 3 consultas com operadores aritméticos 
+   
+   c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
