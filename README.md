@@ -253,8 +253,17 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
    
    b) Criar no mínimo 3 consultas com operadores aritméticos 
    
+     SELECT cod_pessoa,qtd_comissao,qtd_comissao*12 AS comissao_anual FROM instrutor;
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/multi.PNG?raw=true "multiplicação") 
+   
    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
-
+   
+     SELECT cod_pessoa AS num_pessoa, nome AS nome_pessoa, cpf AS cpf_pessoa, email AS email_pessoa, senha AS senha_pessoa FROM PESSOA WHERE cod_pessoa>4; 
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/renomear.PNG?raw=true "renomear") 
+   
+      SELECT cod_pessoa, qtd_comissao AS salario FROM instrutor AS professor WHERE cod_pessoa>8;
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/renomear2.PNG?raw=true "renomear2") 
+   
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
