@@ -269,19 +269,46 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/renomear2.PNG?raw=true "renomear2") 
    
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    b) Criar uma consulta para cada tipo de função data apresentada.
+   a) Criar outras 5 consultas que envolvam like ou ilike
+    
+    SELECT * FROM pessoa WHERE nome LIKE 'A%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like1.PNG?raw=true "like1")
+   
+     SELECT * FROM pessoa WHERE nome LIKE '_a%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like2.PNG?raw=true "like2")
+   
+     SELECT * FROM pessoa WHERE cpf LIKE '%4';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like3.PNG?raw=true "like3")
+   
+    SELECT * FROM pessoa WHERE nome ILIKE '%an%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike1.PNG?raw=true "ilike1")
+    
+    SELECT * FROM curso WHERE nome ILIKE 'gou%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike2")
+   
+   
+   b) Criar uma consulta para cada tipo de função data apresentada.
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    a) Criar minimo 3 de exclusão
-    b) Criar minimo 3 de atualização
-
+   a) Criar minimo 3 de exclusão
+    
+    DELETE FROM aluno_curso WHERE cod_pessoa=5 AND cod_curso=3;
+    DELETE FROM instrutor_curso WHERE cod_pessoa=8;
+    DELETE FROM aluno_curso WHERE qtd_horas_assistidas<= 10;
+    
+   b) Criar minimo 3 de atualização
+        
+    UPDATE curso SET certificado= ‘Emitido após conclusão ‘ WHERE cod_curso= 4;
+    UPDATE instrutor SET qtd_comissao= 80 WHERE cod_pessoa= 9;
+    UPDATE pessoa SET email=‘sandrinha.rosa@gmail.com’, senha= ‘srosa123’ WHERE cod_pessoa=1;    
+    
+    
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
-    a) Criar minimo 2 envolvendo algum tipo de junção
+     a) Criar minimo 2 envolvendo algum tipo de junção
     
     select c.nome as nome_curso, count(*) as quantidade_alunos 
     from eadica.aluno_curso ac 
