@@ -288,6 +288,9 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
    
    
    b) Criar uma consulta para cada tipo de função data apresentada.
+   
+     SELECT cod_pessoa,cod_curso,data,CURRENT_DATE-data AS qtd_dias_total FROM aluno_curso;
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/date1.PNG?raw=true "data")
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
    a) Criar minimo 3 de exclusão
