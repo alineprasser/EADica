@@ -273,8 +273,18 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     b) Criar uma consulta para cada tipo de função data apresentada.
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    a) Criar minimo 3 de exclusão
-    b) Criar minimo 3 de atualização
+   a) Criar minimo 3 de exclusão<br>
+   
+     DELETE FROM aluno_curso WHERE cod_pessoa=5 AND cod_curso=3;
+     DELETE FROM instrutor_curso WHERE cod_pessoa=8;
+     DELETE FROM aluno_curso WHERE qtd_horas_assistidas<= 10;
+    
+   b) Criar minimo 3 de atualização
+   
+     UPDATE curso SET certificado= ‘Emitido após conclusão ‘ WHERE cod_curso= 4;
+     UPDATE instrutor SET qtd_comissao= 80 WHERE cod_pessoa= 9;
+     UPDATE pessoa SET email=‘sandrinha.rosa@gmail.com’, senha= ‘srosa123’ WHERE cod_pessoa=1;
+
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
