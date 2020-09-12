@@ -273,18 +273,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     b) Criar uma consulta para cada tipo de função data apresentada.
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-   a) Criar minimo 3 de exclusão<br>
-   
-     DELETE FROM aluno_curso WHERE cod_pessoa=5 AND cod_curso=3;
-     DELETE FROM instrutor_curso WHERE cod_pessoa=8;
-     DELETE FROM aluno_curso WHERE qtd_horas_assistidas<= 10;
-    
-   b) Criar minimo 3 de atualização
-   
-     UPDATE curso SET certificado= ‘Emitido após conclusão ‘ WHERE cod_curso= 4;
-     UPDATE instrutor SET qtd_comissao= 80 WHERE cod_pessoa= 9;
-     UPDATE pessoa SET email=‘sandrinha.rosa@gmail.com’, senha= ‘srosa123’ WHERE cod_pessoa=1;
-
+    a) Criar minimo 3 de exclusão
+    b) Criar minimo 3 de atualização
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
@@ -401,6 +391,37 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
      a) Criar minimo 1 envolvendo GROUP BY
      b) Criar minimo 1 envolvendo algum tipo de junção
+
+    select * from eadica.aluno_curso c
+    where c.cod_curso in (select cod_curso from eadica.curso where categoria = 'Culinária')
+![Alt text](images/9.10/1.png)
+
+    select * from eadica.aluno
+    where cod_pessoa in (select cod_pessoa from eadica.aluno_curso ac 
+    join eadica.curso c on ac.cod_curso = c.cod_curso where c.nome = 'Web design')
+
+![Alt text](images/9.10/2.png)
+
+    select * from eadica.instrutor i
+    join eadica.pessoa p on i.cod_pessoa = p.cod_pessoa
+    where i.cod_pessoa in (select i.cod_pessoa from eadica.aluno_curso ac
+    join eadica.curso c on ac.cod_curso = c.cod_curso
+    join eadica.instrutor_curso ic on c.cod_curso = ic.cod_curso
+    join eadica.instrutor i on ic.cod_pessoa = i.cod_pessoa
+    where ac.cod_pessoa = 4
+    )
+![Alt text](images/9.10/3.png)
+    
+    select * from eadica.instrutor i
+    join eadica.pessoa p on i.cod_pessoa = p.cod_pessoa
+    where i.cod_pessoa in (select i.cod_pessoa from eadica.aluno_curso ac
+    join eadica.curso c on ac.cod_curso = c.cod_curso
+    join eadica.instrutor_curso ic on c.cod_curso = ic.cod_curso
+    join eadica.instrutor i on ic.cod_pessoa = i.cod_pessoa
+    join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa
+    where p.nome like 'Marcela%'
+    )
+![Alt text](images/9.10/4.png)
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
