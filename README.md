@@ -350,6 +350,43 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+        
+    select p.nome, a1.cod_curso from eadica.aluno_curso a1
+    join eadica.aluno_curso a2 on a1.cod_pessoa <> a2.cod_pessoa and a1.cod_curso = a2.cod_curso
+    join eadica.pessoa p on a1.cod_pessoa = p.cod_pessoa
+![Alt text](images/9.9/1.png)
+
+    create view alunos_horas as
+    select nome as aluno, sum(qtd_horas_assistidas) total_horas from eadica.aluno_curso ac
+    join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa
+    group by p.cod_pessoa
+![Alt text](images/9.9/2.png)
+
+    create view categoria_horas as
+    select categoria, sum(qtd_horas_assistidas) total_horas from eadica.aluno_curso ac
+    join eadica.curso c on ac.cod_curso = c.cod_curso
+    group by c.categoria
+![Alt text](images/9.9/3.png)
+
+    create view categorias_horas_ministradas as
+    select categoria, sum(qtd_horas_ministradas) total_horas from eadica.instrutor_curso ic
+    join eadica.curso c on ic.cod_curso = c.cod_curso
+    group by c.categoria;
+![Alt text](images/9.9/4.png)
+
+    create view alunos_por_curso as 
+    select c.nome as nome_curso, count(*) as quantidade_alunos 
+    from eadica.aluno_curso ac 
+    join eadica.curso c on ac.cod_curso = c.cod_curso group by c.nome;
+![Alt text](images/9.9/5.png)
+
+    create view qtd_cursos_por_aluno as
+    select p.nome nome_aluno, a.matricula as matricula, count(*) as quantidade_cursos 
+    from eadica.aluno_curso ac 
+    join eadica.aluno a on a.cod_pessoa = ac.cod_pessoa 
+    join eadica.pessoa p on p.cod_pessoa = a.cod_pessoa 
+    group by a.matricula, p.nome ;
+![Alt text](images/9.9/6.png)
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
      a) Criar minimo 1 envolvendo GROUP BY
