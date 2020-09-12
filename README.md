@@ -311,6 +311,39 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+    
+    select p.nome as aluno, c.nome as curso, a.matricula from eadica.aluno a
+    join eadica.aluno_curso ac on a.cod_pessoa = ac.cod_pessoa
+    join eadica.curso c on ac.cod_curso = c.cod_curso
+    join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa
+    order by p.nome
+![Alt text](images/9.6/1.png)
+
+    select * from eadica.instrutor
+    order by qtd_comissao desc
+![Alt text](images/9.6/2.png)
+
+    select * from eadica.aluno_curso
+    order by qtd_horas_assistidas desc
+![Alt text](images/9.6/3.png)
+
+    select c.categoria, p.nome as aluno from eadica.aluno a
+    join eadica.aluno_curso ac on a.cod_pessoa = ac.cod_pessoa
+    join eadica.curso c on ac.cod_curso = c.cod_curso
+    join eadica.pessoa p on p.cod_pessoa = a.cod_pessoa
+    order by c.categoria
+![Alt text](images/9.6/4.png)
+
+    select * from eadica.instrutor i
+    join eadica.pessoa p on i.cod_pessoa = p.cod_pessoa
+    order by cpf
+![Alt text](images/9.6/5.png)
+
+    select c.nome as curso, p.nome as instrutor from eadica.curso c
+    join eadica.instrutor_curso ic on c.cod_curso = ic.cod_curso
+    join eadica.pessoa p on p.cod_pessoa = ic.cod_pessoa
+    order by c.nome
+![Alt text](images/9.6/6.png)
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
      a) Criar minimo 2 envolvendo algum tipo de junção
