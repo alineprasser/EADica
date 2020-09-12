@@ -282,7 +282,25 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
+    
+    select c.nome as nome_curso, count(*) as quantidade_alunos from eadica.aluno_curso ac join eadica.curso c on ac.cod_curso = c.cod_curso group by c.nome
+![Alt text](9.7/1.png)
 
+    select p.nome nome_aluno, a.matricula as matricula, count(*) as quantidade_cursos from eadica.aluno_curso ac join eadica.aluno a on a.cod_pessoa = ac.cod_pessoa join eadica.pessoa p on p.cod_pessoa = a.cod_pessoa group by a.matricula, p.nome ;
+![Alt text](9.7/2.png)
+    
+    select count(*) as Professores_Comissao_Maior_50 from eadica.instrutor i where qtd_comissao > 50 group by qtd_comissao ;
+![Alt text](9.7/3.png)
+
+    select p.nome, count(*) from eadica.instrutor_curso ic join eadica.pessoa p on ic.cod_pessoa = p.cod_pessoa where qtd_horas_ministradas > 80 group by p.cod_pessoa;
+![Alt text](9.7/4.png)
+
+    select c.categoria, sum(qtd_horas_assistidas) as qtd_horas_assistidas from eadica.aluno_curso ac join eadica.curso c on ac.cod_curso = c.cod_curso group by c.categoria;
+![Alt text](9.7/5.png)
+    
+    select p.nome as aluno, sum(qtd_horas_assistidas) as qtd_horas_assistidas from eadica.aluno_curso ac join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa join eadica.aluno a on a.cod_pessoa = p.cod_pessoa group by p.nome;
+![Alt text](9.7/6.png)
+    
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
 
