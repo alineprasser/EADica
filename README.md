@@ -268,7 +268,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
       SELECT cod_pessoa, qtd_comissao AS salario FROM instrutor AS professor WHERE cod_pessoa>8;
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/renomear2.PNG?raw=true "renomear2") 
    
-#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
+#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS <br>
    a) Criar outras 5 consultas que envolvam like ou ilike
     
     SELECT * FROM pessoa WHERE nome LIKE 'A%';
@@ -288,6 +288,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
    
    
    b) Criar uma consulta para cada tipo de função data apresentada.
+  
+       A tabela aluno_curso é a única composta por uma coluna tipo data, por este motivo utilizamos somente a função CURRENT_DATE para calcular a quantidade de dias total que o usuário estaria cadastrado no sistema.
    
      SELECT cod_pessoa,cod_curso,data,CURRENT_DATE-data AS qtd_dias_total FROM aluno_curso;
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/date1.PNG?raw=true "data")
