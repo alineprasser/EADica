@@ -258,11 +258,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
    
       SELECT aluno_curso.cod_pessoa, aluno_curso.cod_curso, aluno_curso.qtd_horas_assistidas,curso.duracao, curso.duracao-aluno_curso.qtd_horas_assistidas AS tempo_faltante FROM aluno_curso INNER JOIN curso ON aluno_curso.cod_curso= curso.cod_curso;
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/sub.PNG?raw=true "subtração")
+
    
-    SELECT cod_pessoa,qtd_comissao,qtd_comissao+100 AS comissao_aumento FROM instrutor WHERE cod_pessoa>8;
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/soma.PNG?raw=true "soma")
-
-
    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
    
      SELECT cod_pessoa AS num_pessoa, nome AS nome_pessoa, cpf AS cpf_pessoa, email AS email_pessoa, senha AS senha_pessoa FROM PESSOA WHERE cod_pessoa>4; 
@@ -270,9 +267,6 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
    
       SELECT cod_pessoa, qtd_comissao AS salario FROM instrutor AS professor WHERE cod_pessoa>8;
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/renomear2.PNG?raw=true "renomear2") 
-   
-     SELECT cod_curso, nome AS nome_curso, categoria AS cat_curso, duracao AS tempo_curso, certificado, descricao AS descricao_curso FROM curso;
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/renomear3.PNG?raw=true "renomear3")
    
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
@@ -289,26 +283,69 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
     
-    select c.nome as nome_curso, count(*) as quantidade_alunos from eadica.aluno_curso ac join eadica.curso c on ac.cod_curso = c.cod_curso group by c.nome
+    select c.nome as nome_curso, count(*) as quantidade_alunos 
+    from eadica.aluno_curso ac 
+    join eadica.curso c on ac.cod_curso = c.cod_curso group by c.nome
 ![Alt text](9.7/1.png)
 
-    select p.nome nome_aluno, a.matricula as matricula, count(*) as quantidade_cursos from eadica.aluno_curso ac join eadica.aluno a on a.cod_pessoa = ac.cod_pessoa join eadica.pessoa p on p.cod_pessoa = a.cod_pessoa group by a.matricula, p.nome ;
+    select p.nome nome_aluno, a.matricula as matricula, count(*) as quantidade_cursos 
+    from eadica.aluno_curso ac 
+    join eadica.aluno a on a.cod_pessoa = ac.cod_pessoa 
+    join eadica.pessoa p on p.cod_pessoa = a.cod_pessoa 
+    group by a.matricula, p.nome ;
 ![Alt text](9.7/2.png)
     
-    select count(*) as Professores_Comissao_Maior_50 from eadica.instrutor i where qtd_comissao > 50 group by qtd_comissao ;
+    select count(*) as Professores_Comissao_Maior_50 
+    from eadica.instrutor i 
+    where qtd_comissao > 50 
+    group by qtd_comissao ;
 ![Alt text](9.7/3.png)
 
-    select p.nome, count(*) from eadica.instrutor_curso ic join eadica.pessoa p on ic.cod_pessoa = p.cod_pessoa where qtd_horas_ministradas > 80 group by p.cod_pessoa;
+    select p.nome, count(*) 
+    from eadica.instrutor_curso ic 
+    join eadica.pessoa p on ic.cod_pessoa = p.cod_pessoa 
+    where qtd_horas_ministradas > 80 
+    group by p.cod_pessoa;
 ![Alt text](9.7/4.png)
 
-    select c.categoria, sum(qtd_horas_assistidas) as qtd_horas_assistidas from eadica.aluno_curso ac join eadica.curso c on ac.cod_curso = c.cod_curso group by c.categoria;
+    select c.categoria, sum(qtd_horas_assistidas) as qtd_horas_assistidas 
+    from eadica.aluno_curso ac 
+    join eadica.curso c on ac.cod_curso = c.cod_curso
+    group by c.categoria;
 ![Alt text](9.7/5.png)
     
-    select p.nome as aluno, sum(qtd_horas_assistidas) as qtd_horas_assistidas from eadica.aluno_curso ac join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa join eadica.aluno a on a.cod_pessoa = p.cod_pessoa group by p.nome;
+    select p.nome as aluno, sum(qtd_horas_assistidas) as qtd_horas_assistidas 
+    from eadica.aluno_curso ac 
+    join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa 
+    join eadica.aluno a on a.cod_pessoa = p.cod_pessoa 
+    group by p.nome;
 ![Alt text](9.7/6.png)
     
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
+    
+    select nome,email,matricula from eadica.aluno a
+    left join eadica.aluno_curso ac on a.cod_pessoa = ac.cod_pessoa
+    join eadica.pessoa p on a.cod_pessoa = p.cod_pessoa
+    where ac.cod_pessoa is null
+![Alt text](9.8/1.png)
+
+    select * from eadica.aluno a
+    full join eadica.pessoa p on a.cod_pessoa = p.cod_pessoa
+    order by p.cod_pessoa
+![Alt text](9.8/2.png)
+
+    select * from eadica.instrutor i
+    full join eadica.pessoa p on i.cod_pessoa = p.cod_pessoa
+    order by p.cod_pessoa
+![Alt text](9.8/3.png)
+
+    select p.nome as instrutor, c.nome as curso from eadica.instrutor i
+    right join eadica.instrutor_curso ic on i.cod_pessoa = ic.cod_pessoa
+    join eadica.pessoa p on ic.cod_pessoa = p.cod_pessoa
+    join eadica.curso c on ic.cod_curso = c.cod_curso
+    where i.cod_pessoa is null
+![Alt text](9.8/4.png)
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
