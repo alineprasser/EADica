@@ -328,24 +328,24 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     left join eadica.aluno_curso ac on a.cod_pessoa = ac.cod_pessoa
     join eadica.pessoa p on a.cod_pessoa = p.cod_pessoa
     where ac.cod_pessoa is null
-![Alt text](9.8/1.png)
+![Alt text](images/9.8/1.png)
 
     select * from eadica.aluno a
     full join eadica.pessoa p on a.cod_pessoa = p.cod_pessoa
     order by p.cod_pessoa
-![Alt text](9.8/2.png)
+![Alt text](images/9.8/2.png)
 
     select * from eadica.instrutor i
     full join eadica.pessoa p on i.cod_pessoa = p.cod_pessoa
     order by p.cod_pessoa
-![Alt text](9.8/3.png)
+![Alt text](images/9.8/3.png)
 
     select p.nome as instrutor, c.nome as curso from eadica.instrutor i
     right join eadica.instrutor_curso ic on i.cod_pessoa = ic.cod_pessoa
     join eadica.pessoa p on ic.cod_pessoa = p.cod_pessoa
     join eadica.curso c on ic.cod_curso = c.cod_curso
     where i.cod_pessoa is null
-![Alt text](9.8/4.png)
+![Alt text](images/9.8/4.png)
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
