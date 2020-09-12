@@ -268,6 +268,9 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
       SELECT cod_pessoa, qtd_comissao AS salario FROM instrutor AS professor WHERE cod_pessoa>8;
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/renomear2.PNG?raw=true "renomear2") 
    
+     SELECT cod_curso, nome AS nome_curso, categoria AS cat_curso, duracao AS tempo_curso, certificado, descricao AS descricao_curso FROM curso;
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/renomear3.PNG?raw=true "renomear3")
+   
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
