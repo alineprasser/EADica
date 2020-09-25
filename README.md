@@ -50,7 +50,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 * Relatório que mostre quantos alunos já concluíram algum curso
 * Relatório que mostre a quantidade de alunos em cada curso disponibilizado na plataforma
 * Relatório que mostre quantas categorias diferentes existem na plataforma
-* Relatório que mostre quantos certificados foram emitidos no último ano
+* Relatório que mostre a quantidade de horas assistidas pelos alunos
 * Relatório que mostre a média de horas ministradas pelos professores de uma determinada categoria
 
  
