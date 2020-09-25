@@ -47,11 +47,11 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 * EADica fornecerá aos alunos conteúdos exclusivos em sua plataforma e emitirá certificados de conclusão de cursos, enquanto aos professores mostrará como vai o andamento da sua turma.
 
 > A EADica poderá fornecer os seguintes relatórios:
-* Relatório que mostre quantos alunos já concluíram algum curso
+* Relatório para exibir quantidade de cursos ofertado em cada categoria disponibilizada
 * Relatório que mostre a quantidade de alunos em cada curso disponibilizado na plataforma
-* Relatório que mostre quantas categorias diferentes existem na plataforma
-* Relatório que mostre a quantidade de horas assistidas pelos alunos
-* Relatório que mostre a média de horas ministradas pelos professores de uma determinada categoria
+* Relatório para exibir a relação de alunos por categoria ofertada na plataforma
+* Relatório que mostre a quantidade média de horas assistidas pelos alunos em cada categoria
+* Relatório que mostre a média de horas ministradas pelos professores de em cada categoria
 
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
