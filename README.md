@@ -211,7 +211,23 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
             ,(7,50)
             ,(8,55)
             ,(9,55)
-            ,(10,55);
+            ,(10,55)
+            ,(28,150)
+            ,(29,250)
+            ,(30,255)
+            ,(31,300)
+            ,(32,80)
+            ,(33,60)
+            ,(34,90)
+            ,(35,100)
+            ,(36,110)
+            ,(37,400)
+            ,(38,78)
+            ,(39,24)
+            ,(40,95)
+            ,(41,150)
+            ,(42,250)
+            ,(43,255);
 
         insert into Curso (nome, categoria, duracao, descricao, certificado) values
             ('Lógica de programação para iniciantes','Tecnologia',60, ' Curso focado em ensinar as bases da lógica de programação','Emitido após conclusão')
