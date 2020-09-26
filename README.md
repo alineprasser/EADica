@@ -44,7 +44,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
 > O sistema fornecerá que tipo de informação?
-* EADica fornecerá aos alunos conteúdos exclusivos em sua plataforma e emitirá certificados de conclusão de cursos, enquanto aos professores mostrará como vai o andamento da sua turma.
+* EADica é uma plataforma que visa beneficiar alunos e instrutores. Os alunos poderão ter acesso a diversos cursos exclusivos e receberão um certificado correspondente a experiência adquirida ao longo de sua trajetória enquanto os instrutores serão remunerados de acordo com seus próprios preços informados. Será possível realizar um estudo a respeito de que categorias são mais procuradas atualmente, tendo em vista o cenário de estudo a distância.
 
 > A EADica poderá fornecer os seguintes relatórios:
 * Relatório para exibir quantidade de cursos ofertados em cada categoria disponibilizada
