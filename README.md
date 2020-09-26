@@ -236,7 +236,24 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
             ,('Matemática básica','Matemática',30,'Curso com enfoque básico em matemática para alunos do ensino médio','Emitido ao meio e após a conclusão do curso')
             ,('Gourmetização dos doces','Culinária',150,'Aprenda a fazer doces deliciosos','Emitido após conclusão')
             ,('Gourmetização dos salgados','Culinária',100,'Aprenda a fazer salgadinhos para sua festa','Emitido após conclusão')
-            ,('Fundamentos de SQL','Tecnologia',80,'Saiba mais sobre SQL','Emitido após conclusão');
+            ,('Fundamentos de SQL','Tecnologia',80,'Saiba mais sobre SQL','Emitido após conclusão')
+            ,('Corte e Costura para iniciantes','Costura',60, ' Curso focado em ensinar as bases da costura para iniciantes','Emitido após conclusão')
+            ,('Tortas e Bolos','Culinária',95,'Curso focado em aprimorar conhecimentos em tortas e bolos','Emitido após conclusão')
+            ,('Cálculo Avançado','Matemática',100,'Curso para aprimorar os conceitos de cálculo básico','Emitido após conclusão')
+            ,('Matemática intermediária','Matemática',30,'Curso com enfoque em matemática para alunos do ensino superior','Emitido ao meio e após a conclusão do curso')
+            ,('Especialização em Frutos do Mar','Culinária',150,'Aprenda a fazer pratos refinados de frutos do mar','Emitido após conclusão')
+            ,('Fundamentos de programação web','Tecnologia',100,'Saiba mais sobre programação web','Emitido após conclusão')
+            ,('Fundamentos de Bordado','Costura',80,'Saiba mais sobre tipos de bordados','Emitido após conclusão')
+            ,('Especialização em corte e costura ','Costura',120,'Fique ainda mais expert em suas costuras','Emitido após conclusão')
+            ,('Desvendando mentiras','Psicologia',240,'Aprenda a identificar mentiras através de microexpressões','Emitido após conclusão')
+            ,('Desvendando mentiras parte 2','Psicologia',60,'Parte dois do curso desvendando mentiras','Emitido após conclusão')
+            ,('Entendendo a mente humana em 5 etapas','´Psicologia',80,'Aprenda a entender um pouco mais sobre como nossa mente funciona','Emitido após conclusão')
+            ,('Redacione o ENEM','Língua Portuguesa',90,'Treine para tirar 1000 na redação do ENEM','Emitido após conclusão')
+            ,('Yoga para iniciantes','Treino',40,'Aprenda os princípios da Yoga e viva em paz','Emitido após conclusão')
+            ,('Pilates para iniciantes','Treino',80,'Veja como o pilates pode mudar a sua vida','Emitido após conclusão')
+            ,('NO PAIN NO GAIN','Treino',30,'Coletânea de aulas na academia para quem quer se inspirar','Emitido após conclusão')
+            ,('Básica da música','Música',75,'Entenda o que levou a música a se tornar o que é hoje','Emitido após conclusão')
+            ,('Arte em sua essência','Artes',45,'Veja a evolução da arte ao longo dos anos e entenda profundamente.','Emitido após conclusão');
 
         insert into Aluno_Curso (cod_pessoa, cod_curso, data, qtd_horas_assistidas) values
             (1,4, '2020-06-29', 9)
