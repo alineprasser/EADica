@@ -406,7 +406,11 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-    SELECT * FROM ALUNO WHERE COD_PESSOA > 2;
+    select p.nome, ac.cod_curso, c.nome as curso from eadica.aluno a
+    join eadica.aluno_curso ac on a.cod_pessoa = ac.cod_pessoa
+    join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa
+    join eadica.curso c on ac.cod_curso = c.cod_curso
+    where p.cod_pessoa=15
 ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where1.PNG?raw=true "where1")
 
     SELECT * FROM INSTRUTOR_CURSO WHERE QTD_HORAS_MINISTRADAS >= 45;
@@ -441,7 +445,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
      SELECT cod_pessoa,qtd_comissao,qtd_comissao*12 AS comissao_anual FROM instrutor;
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/multi.PNG?raw=true "multiplicação") 
    
-      SELECT aluno_curso.cod_pessoa, aluno_curso.cod_curso, aluno_curso.qtd_horas_assistidas,curso.duracao, curso.duracao-aluno_curso.qtd_horas_assistidas AS tempo_faltante FROM aluno_curso INNER JOIN curso ON aluno_curso.cod_curso= curso.cod_curso;
+    SELECT aluno_curso.cod_pessoa, aluno_curso.cod_curso, aluno_curso.qtd_horas_assistidas,curso.duracao, curso.duracao-aluno_curso.qtd_horas_assistidas AS tempo_faltante FROM eadica.aluno_curso INNER JOIN eadica.curso ON aluno_curso.cod_curso= curso.cod_curso
+    where curso.duracao-aluno_curso.qtd_horas_assistidas < 20;
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/sub.PNG?raw=true "subtração")
 
    
@@ -497,11 +502,16 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
     
-    select p.nome as aluno, c.nome as curso, a.matricula from eadica.aluno a
+    select distinct p.nome as aluno, c.nome as curso, a.matricula, p2.nome as instrutor
+    from eadica.aluno a
     join eadica.aluno_curso ac on a.cod_pessoa = ac.cod_pessoa
     join eadica.curso c on ac.cod_curso = c.cod_curso
     join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa
+    join eadica.instrutor_curso ic on ic.cod_curso = c.cod_curso
+    join eadica.instrutor i on ic.cod_pessoa = i.cod_pessoa
+    join eadica.pessoa p2 on i.cod_pessoa = p2.cod_pessoa
     order by p.nome
+    
 ![Alt text](images/9.6/1.png)
 
     select * from eadica.instrutor
@@ -590,11 +600,10 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     order by p.cod_pessoa
 ![Alt text](images/9.8/3.png)
 
-    select p.nome as instrutor, c.nome as curso from eadica.instrutor i
-    right join eadica.instrutor_curso ic on i.cod_pessoa = ic.cod_pessoa
-    join eadica.pessoa p on ic.cod_pessoa = p.cod_pessoa
-    join eadica.curso c on ic.cod_curso = c.cod_curso
-    where i.cod_pessoa is null
+    select nome,email, *  from eadica.instrutor_curso ac
+    right join eadica.instrutor a on a.cod_pessoa = ac.cod_pessoa
+    join eadica.pessoa p on a.cod_pessoa = p.cod_pessoa
+    where ac.cod_pessoa is null
 ![Alt text](images/9.8/4.png)
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
@@ -662,15 +671,16 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     )
 ![Alt text](images/9.10/3.png)
     
-    select * from eadica.instrutor i
-    join eadica.pessoa p on i.cod_pessoa = p.cod_pessoa
-    where i.cod_pessoa in (select i.cod_pessoa from eadica.aluno_curso ac
-    join eadica.curso c on ac.cod_curso = c.cod_curso
-    join eadica.instrutor_curso ic on c.cod_curso = ic.cod_curso
-    join eadica.instrutor i on ic.cod_pessoa = i.cod_pessoa
-    join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa
-    where p.nome like 'Marcela%'
-    )
+    select * from (
+
+    select c.nome as nome_curso, count(*) as quantidade_alunos 
+    from eadica.aluno_curso ac 
+    join eadica.curso c on ac.cod_curso = c.cod_curso 
+    group by c.nome
+    order by quantidade_alunos desc
+
+    ) as x
+    limit 5
 ![Alt text](images/9.10/4.png)
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
