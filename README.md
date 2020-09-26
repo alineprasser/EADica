@@ -380,22 +380,26 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 [Link para o Notebook Colab](https://colab.research.google.com/drive/1OrMqNdFlwdn3QZb-6JrqZfzvMlKO8Vkv?usp=sharing)
 
         SELECT * FROM PESSOA     
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectPessoa.PNG?raw=true "Select Pessoa")
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/pessoa1.png)
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/pessoa2.png)
    
         SELECT * FROM ALUNO
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectAluno.PNG?raw=true "Select Aluno")
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/aluno.png)
    
         SELECT * FROM CURSO
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectCurso.PNG?raw=true "Select Curso")   
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/curso.png)   
     
         SELECT * FROM INSTRUTOR
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectInstrutor.PNG?raw=true "Select Instrutor")
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/instrutor.png)
    
         SELECT * FROM ALUNO_CURSO
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectAlunoCurso.PNG?raw=true "Select Aluno_Curso") 
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/aluno_curso1.png) 
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/aluno_curso2.png) 
    
         SELECT * FROM INSTRUTOR_CURSO
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/selectInstrutorCurso.PNG?raw=true "Select Instrutor_Curso") 
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/instrutor_curso1.png) 
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/instrutor_curso2.png) 
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/select%20tabelas/instrutor_curso3.png) 
    
    
    
