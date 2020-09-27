@@ -512,7 +512,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     join eadica.pessoa p2 on i.cod_pessoa = p2.cod_pessoa
     order by p.nome
     
-![Alt text](images/9.6/1.png)
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/alunos_e_instrutores.png)
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/alunos_e_instrutores2.png)
 
     select * from eadica.instrutor
     order by qtd_comissao desc
@@ -681,7 +682,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
     ) as x
     limit 5
-![Alt text](images/9.10/4.png)
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/subconsulta_group.png)
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
