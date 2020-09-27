@@ -411,43 +411,43 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     join eadica.pessoa p on ac.cod_pessoa = p.cod_pessoa
     join eadica.curso c on ac.cod_curso = c.cod_curso
     where p.cod_pessoa=15
-![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where1.PNG?raw=true "where1")
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/cod_pessoa15.png)
 
     SELECT * FROM INSTRUTOR_CURSO WHERE QTD_HORAS_MINISTRADAS >= 45;
-![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where2.PNG?raw=true "where2")
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/horas45.png)
 
     SELECT * FROM ALUNO_CURSO WHERE COD_CURSO = 3;
-![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where3.PNG?raw=true "where3")
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/COD_CURSO3.png)
     
     SELECT * FROM CURSO WHERE CATEGORIA = 'Tecnologia';
-![Alt text](https://github.com/alineprasser/EADica/blob/master/images/where4.PNG?raw=true "where4")
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/caetgoria_tec.png)
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)<br>
    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     
     SELECT * FROM CURSO WHERE COD_CURSO>2 AND DURACAO>=100;
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/AND.PNG?raw=true "AND")
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/9.3%20UM.png)
     
     SELECT * FROM CURSO WHERE DURACAO>100 AND CATEGORIA='Culinária';
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/AND2.PNG?raw=true "AND2")
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/9.3%20DOIS.png)
    
     SELECT * FROM ALUNO_CURSO WHERE QTD_HORAS_ASSISTIDAS>9 OR COD_CURSO=3;
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/OR.PNG?raw=true "OR")
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/9.3%20TRES.png)
    
     SELECT * FROM CURSO WHERE CERTIFICADO='Emitido após conclusão' OR DURACAO>30;
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/OR2.PNG?raw=true "OR2")
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/9.3%20QUARTRO.png)
    
     SELECT * FROM PESSOA WHERE CPF IS NOT NULL;
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/NOT.PNG?raw=true "NOT")
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/9.3%20CINCO.png)
    
    b) Criar no mínimo 3 consultas com operadores aritméticos 
    
      SELECT cod_pessoa,qtd_comissao,qtd_comissao*12 AS comissao_anual FROM instrutor;
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/multi.PNG?raw=true "multiplicação") 
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/COMISSAO.png) 
    
     SELECT aluno_curso.cod_pessoa, aluno_curso.cod_curso, aluno_curso.qtd_horas_assistidas,curso.duracao, curso.duracao-aluno_curso.qtd_horas_assistidas AS tempo_faltante FROM eadica.aluno_curso INNER JOIN eadica.curso ON aluno_curso.cod_curso= curso.cod_curso
     where curso.duracao-aluno_curso.qtd_horas_assistidas < 20;
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/sub.PNG?raw=true "subtração")
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/menos%20de%2020h.png)
 
    
    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
