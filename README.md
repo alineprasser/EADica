@@ -770,6 +770,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 #### a) Modelo (pecha kucha)<br>
 #### b) Tempo de apresentação 6:40 
 
+[Link da apresentação no Youtube](https://youtu.be/qspK4NamNsc)
+
 ># Marco de Entrega 03: Itens 10 e 11<br>
 <br>
 <br>
