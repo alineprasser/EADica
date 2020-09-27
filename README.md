@@ -71,7 +71,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
         e tuplas falsas (Aplicar os conceitos de normalização abordados).   
         
-![Alt text](https://github.com/alineprasser/EADica/blob/master/images/conceitual.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/Capturar.PNG?raw=true "Modelo Conceitual")
     
     
         
