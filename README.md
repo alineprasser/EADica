@@ -26,7 +26,7 @@ gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 > Uma instituição de ensino a distância deseja um sistema de informação para gerenciar suas atividades e prover cursos online.<br>
 Dos alunos serão armazenadas informações como nome, cpf, email, matrícula e senha de acesso ao sistema.<br>
 Dos cursos serão armazenados o nome, categoria (tecnologia, biologia, matemática, filosofia...), tempo de duração, descrição e certificado de conclusão.<br>
-Cada aluno pode estar inscrito em nenhum ou vários cursos ao mesmo tempo<br>
+Cada aluno pode estar inscrito em nenhum ou vários cursos ao mesmo tempo, enquanto um curso precisa ter pelo menos um aluno inscrito.<br>
 Os dados armazenados dos instrutores são nome, email, cpf e valor da comissão<br>
 Um instrutor poderá auxiliar em vários cursos, mas não obrigatoriamente precisa estar ativo em algum. E obrigatoriamente, um curso precisa de no mínimo um instrutor ministrando.<br>
 Ao final do curso, as horas cumpridas do aluno precisam ser validadas antes de ser emitido o certificado final contendo nome do aluno, nome do curso, nome do instrutor, quantidade de horas total, quantidade de horas cumpridas e data da emissão do certificado.
@@ -477,25 +477,28 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike2")
    
     SELECT * FROM eadica.pessoa WHERE nome ILIKE '%dias%';
-   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/1.png
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/1.png?raw=true "ilike3")
+ 
    
     SELECT * FROM eadica.curso WHERE mome LIKE '%iniciantes%';
-   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/5.png
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/5.png?raw=true "like4")
+  
    
     SELECT * FROM eadica.curso WHERE categoria LIKE '%Tecnologia%';
-   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/6.png
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/6.png?raw=true "like5")
    
     SELECT * FROM eadica.pessoa WHERE nome LIKE '%s';
-   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/2.png
-   
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/2.png?raw=true "like6")
+
     SELECT * FROM eadica.pessoa WHERE cpf LIKE '%11%';
-   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/3.png
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/3.png?raw=true "like7")
    
     SELECT * FROM eadica.pessoa WHERE nome ILIKE '%alves%';
-   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/4.png
-   
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/4.png?raw=true "ilike4")
+
     SELECT * FROM eadica.curso WHERE certificado LIKE '%após%';
-   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/7.png
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/7.png?raw=true "like8")
+
    
    b) Criar uma consulta para cada tipo de função data apresentada.
   
