@@ -438,7 +438,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/9.3%20QUARTRO.png)
    
     SELECT * FROM PESSOA WHERE CPF IS NOT NULL;
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/9.3%20CINCO.png)
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/NOT.PNG)
    
    b) Criar no mínimo 3 consultas com operadores aritméticos 
    
