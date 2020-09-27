@@ -127,7 +127,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         
         create table Instrutor (cod_pessoa int, qtd_comissao float, FOREIGN KEY (cod_pessoa) REFERENCES Pessoa (cod_pessoa));
         
-        create table Curso ( cod_curso serial PRIMARY KEY, nome varchar(50), categoria varchar(255), duracao float, certificado varchar(255), descricao varchar(255));
+        create table Curso ( cod_curso serial PRIMARY KEY, nome varchar(50), categoria varchar(100), duracao float, certificado varchar(255), descricao varchar(255));
         
         create table Aluno_Curso (cod_aluno_curso serial PRIMARY KEY, cod_pessoa int, cod_curso int, qtd_horas_assistidas float, data date, FOREIGN KEY (cod_pessoa) REFERENCES            Pessoa (cod_pessoa), FOREIGN KEY (cod_curso) REFERENCES Curso (cod_curso));
         
@@ -476,6 +476,26 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     SELECT * FROM curso WHERE nome ILIKE 'gou%';
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike2")
    
+    SELECT * FROM pessoa WHERE nome ILIKE '%dias%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike3")
+   
+    SELECT * FROM curso WHERE mome LIKE '%iniciantes%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike4")
+   
+    SELECT * FROM curso WHERE categoria LIKE '%Tecnologia%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike5")
+   
+    SELECT * FROM pessoa WHERE nome LIKE '%s';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike6")
+   
+    SELECT * FROM pessoa WHERE cpf LIKE '%11%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike7")
+   
+    SELECT * FROM pessoa WHERE nome ILIKE '%alves%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike4")
+   
+    SELECT * FROM curso WHERE certificado LIKE '%após%';
+   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike8")
    
    b) Criar uma consulta para cada tipo de função data apresentada.
   
