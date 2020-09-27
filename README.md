@@ -72,7 +72,6 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         
 ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/Capturar.PNG?raw=true "Modelo Conceitual")
     
-    
         
     
 #### 5.1 Validação do Modelo Conceitual
