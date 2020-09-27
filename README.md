@@ -589,7 +589,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     left join eadica.aluno_curso ac on a.cod_pessoa = ac.cod_pessoa
     join eadica.pessoa p on a.cod_pessoa = p.cod_pessoa
     where ac.cod_pessoa is null
-![Alt text](images/9.8/1.png)
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/9.8%201.png)
 
     select * from eadica.aluno a
     full join eadica.pessoa p on a.cod_pessoa = p.cod_pessoa
@@ -605,7 +605,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     right join eadica.instrutor a on a.cod_pessoa = ac.cod_pessoa
     join eadica.pessoa p on a.cod_pessoa = p.cod_pessoa
     where ac.cod_pessoa is null
-![Alt text](images/9.8/4.png)
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/consultas/9.8%204.png)
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
