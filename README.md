@@ -132,6 +132,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
         
         create table Instrutor_Curso ( cod_instrutor_curso serial PRIMARY KEY, cod_pessoa int, cod_curso int, qtd_horas_ministradas float, FOREIGN KEY (cod_pessoa) REFERENCES            Pessoa (cod_pessoa), FOREIGN KEY (cod_curso) REFERENCES Curso (cod_curso));
 
+
         
        
 ### 8.	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
