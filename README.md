@@ -692,7 +692,45 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 #### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
 #### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
 
-    
+### Relatório 1
+#### Objetivo: Obter relatório para exibir quantidade de cursos ofertado em cada categoria disponibilizada
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/relatorios/relatorio%201.1.png)
+    select categoria, count(*) as qtd_curso from eadica.curso group by categoria order by qtd_curso
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/imagens%20graficos/qtd_curso_categoria.png)
+
+### Relatório 2
+#### Objetivo: Obter relatório para exibir quantidade de alunos em cada curso disponibilizado na plataforma
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/relatorios/relatorio%202.1.png)   
+    select c.nome, count(ac.cod_pessoa) as qtd_alunos from eadica.aluno_curso ac
+    join eadica.curso c on c.cod_curso = ac.cod_curso
+    group by c.nome order by qtd_alunos desc
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/imagens%20graficos/relacao%20alunos%20e%20curso.png)
+
+### Relatório 3
+#### Objetivo: Obter relatório para exibir quantidade de alunos por categoria ofertada na plataforma
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/relatorios/relatorio%203.1.png)
+    select c.categoria, count(ac.cod_pessoa) as qtd_alunos from eadica.aluno_curso ac
+    join eadica.curso c on c.cod_curso = ac.cod_curso
+    group by c.categoria order by qtd_alunos desc
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/imagens%20graficos/qtd_alunos_categoria.png)
+
+### Relatório 4
+#### Objetivo: Obter relatório para exibir quantidade média de horas assistidas pelos alunos em cada categoria
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/relatorios/relatorio%204.1.png)
+    select avg(qtd_horas_assistidas) as media_horas, categoria from eadica.aluno_curso ac
+    join eadica.curso c on ac.cod_curso = c.cod_curso
+    group by categoria
+    order by media_horas desc
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/imagens%20graficos/media_horas_assistidas.png)
+
+### Relatório 5
+#### Objetivo: Obter relatório para exibir quantidade média de horas ministradas pelos professores em cada categoria
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/relatorios/relatorio%205.1.png)
+    select avg(qtd_horas_ministradas) as media_horas_ministradas, categoria from eadica.instrutor_curso ic
+    join eadica.curso c on ic.cod_curso = c.cod_curso
+    group by categoria
+    order by media_horas_ministradas desc
+![Alt text](https://github.com/alineprasser/EADica/blob/master/images/imagens%20graficos/media_horas_ministradas.png)
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
