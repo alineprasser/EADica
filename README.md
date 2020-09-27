@@ -476,26 +476,26 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
     SELECT * FROM curso WHERE nome ILIKE 'gou%';
    ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike2")
    
-    SELECT * FROM pessoa WHERE nome ILIKE '%dias%';
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike3")
+    SELECT * FROM eadica.pessoa WHERE nome ILIKE '%dias%';
+   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/1.png
    
-    SELECT * FROM curso WHERE mome LIKE '%iniciantes%';
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike4")
+    SELECT * FROM eadica.curso WHERE mome LIKE '%iniciantes%';
+   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/5.png
    
-    SELECT * FROM curso WHERE categoria LIKE '%Tecnologia%';
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike5")
+    SELECT * FROM eadica.curso WHERE categoria LIKE '%Tecnologia%';
+   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/6.png
    
-    SELECT * FROM pessoa WHERE nome LIKE '%s';
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike6")
+    SELECT * FROM eadica.pessoa WHERE nome LIKE '%s';
+   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/2.png
    
-    SELECT * FROM pessoa WHERE cpf LIKE '%11%';
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike7")
+    SELECT * FROM eadica.pessoa WHERE cpf LIKE '%11%';
+   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/3.png
    
-    SELECT * FROM pessoa WHERE nome ILIKE '%alves%';
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike4")
+    SELECT * FROM eadica.pessoa WHERE nome ILIKE '%alves%';
+   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/4.png
    
-    SELECT * FROM curso WHERE certificado LIKE '%após%';
-   ![Alt text](https://github.com/alineprasser/EADica/blob/master/images/ilike2.PNG?raw=true "ilike8")
+    SELECT * FROM eadica.curso WHERE certificado LIKE '%após%';
+   https://github.com/alineprasser/EADica/blob/master/images/like%20e%20ilike/7.png
    
    b) Criar uma consulta para cada tipo de função data apresentada.
   
